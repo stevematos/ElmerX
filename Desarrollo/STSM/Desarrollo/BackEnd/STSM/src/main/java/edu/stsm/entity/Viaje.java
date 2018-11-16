@@ -28,9 +28,7 @@ public class Viaje implements Serializable {
     
     private boolean enCurso;
     
-    private Automovil idAutomovil;
-    
-    private List<Asiento> asientoList;
+    private Integer idAutomovil;
 
     public Viaje() {
     }
@@ -96,45 +94,44 @@ public class Viaje implements Serializable {
         this.enCurso = enCurso;
     }
 
-    public Automovil getIdAutomovil() {
+    public Integer getIdAutomovil() {
         return idAutomovil;
     }
 
-    public void setIdAutomovil(Automovil idAutomovil) {
+    public void setIdAutomovil(Integer idAutomovil) {
         this.idAutomovil = idAutomovil;
     }
 
-    public List<Asiento> getAsientoList() {
-        return asientoList;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idViaje == null) ? 0 : idViaje.hashCode());
+		return result;
+	}
 
-    public void setAsientoList(List<Asiento> asientoList) {
-        this.asientoList = asientoList;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Viaje other = (Viaje) obj;
+		if (idViaje == null) {
+			if (other.idViaje != null)
+				return false;
+		} else if (!idViaje.equals(other.idViaje))
+			return false;
+		return true;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idViaje != null ? idViaje.hashCode() : 0);
-        return hash;
-    }
+	@Override
+	public String toString() {
+		return "Viaje [idViaje=" + idViaje + ", inicio=" + inicio + ", fin=" + fin + ", cupos=" + cupos
+				+ ", cuposDisponibles=" + cuposDisponibles + ", enCurso=" + enCurso + ", idAutomovil=" + idAutomovil
+				+ "]";
+	}
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Viaje)) {
-            return false;
-        }
-        Viaje other = (Viaje) object;
-        if ((this.idViaje == null && other.idViaje != null) || (this.idViaje != null && !this.idViaje.equals(other.idViaje))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "edu.stsm.entity.Viaje[ idViaje=" + idViaje + " ]";
-    }
-    
 }

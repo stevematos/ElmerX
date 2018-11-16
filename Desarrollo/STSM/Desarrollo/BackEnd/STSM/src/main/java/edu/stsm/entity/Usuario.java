@@ -30,11 +30,7 @@ public class Usuario implements Serializable {
     
     private String contrasena;
     
-    private List<Pasajero> pasajeroList;
-    
-    private Facultad idFacultad;
-    
-    private List<Conductor> conductorList;
+    private Integer idFacultad;
 
     public Usuario() {
     }
@@ -109,53 +105,44 @@ public class Usuario implements Serializable {
         this.contrasena = contrasena;
     }
 
-    public List<Pasajero> getPasajeroList() {
-        return pasajeroList;
-    }
-
-    public void setPasajeroList(List<Pasajero> pasajeroList) {
-        this.pasajeroList = pasajeroList;
-    }
-
-    public Facultad getIdFacultad() {
+    public Integer getIdFacultad() {
         return idFacultad;
     }
 
-    public void setIdFacultad(Facultad idFacultad) {
+    public void setIdFacultad(Integer idFacultad) {
         this.idFacultad = idFacultad;
     }
 
-    public List<Conductor> getConductorList() {
-        return conductorList;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idUsuario == null) ? 0 : idUsuario.hashCode());
+		return result;
+	}
 
-    public void setConductorList(List<Conductor> conductorList) {
-        this.conductorList = conductorList;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		if (idUsuario == null) {
+			if (other.idUsuario != null)
+				return false;
+		} else if (!idUsuario.equals(other.idUsuario))
+			return false;
+		return true;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idUsuario != null ? idUsuario.hashCode() : 0);
-        return hash;
-    }
+	@Override
+	public String toString() {
+		return "Usuario [idUsuario=" + idUsuario + ", nombre=" + nombre + ", apellidos=" + apellidos + ", celular="
+				+ celular + ", codAlumno=" + codAlumno + ", usuario=" + usuario + ", contrasena=" + contrasena
+				+ ", idFacultad=" + idFacultad + "]";
+	}
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Usuario)) {
-            return false;
-        }
-        Usuario other = (Usuario) object;
-        if ((this.idUsuario == null && other.idUsuario != null) || (this.idUsuario != null && !this.idUsuario.equals(other.idUsuario))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "edu.stsm.entity.Usuario[ idUsuario=" + idUsuario + " ]";
-    }
-    
 }

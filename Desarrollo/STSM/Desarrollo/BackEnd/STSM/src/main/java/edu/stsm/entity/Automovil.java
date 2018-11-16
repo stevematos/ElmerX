@@ -17,17 +17,13 @@ public class Automovil implements Serializable {
     
     private Integer idAutomovil;
     
-    private String entityo;
+    private String modelo;
     
     private int asientos;
     
     private String soat;
     
-    private Conductor idConductor;
-    
-    private List<Viaje> viajeList;
-    
-    private List<Conductor> conductorList;
+    private Integer idConductor;
 
     public Automovil() {
     }
@@ -36,9 +32,9 @@ public class Automovil implements Serializable {
         this.idAutomovil = idAutomovil;
     }
 
-    public Automovil(Integer idAutomovil, String entityo, int asientos, String soat) {
+    public Automovil(Integer idAutomovil, String modelo, int asientos, String soat) {
         this.idAutomovil = idAutomovil;
-        this.entityo = entityo;
+        this.modelo = modelo;
         this.asientos = asientos;
         this.soat = soat;
     }
@@ -52,11 +48,11 @@ public class Automovil implements Serializable {
     }
 
     public String getModelo() {
-        return entityo;
+        return modelo;
     }
 
-    public void setModelo(String entityo) {
-        this.entityo = entityo;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public int getAsientos() {
@@ -75,53 +71,43 @@ public class Automovil implements Serializable {
         this.soat = soat;
     }
 
-    public Conductor getIdConductor() {
+    public Integer getIdConductor() {
         return idConductor;
     }
 
-    public void setIdConductor(Conductor idConductor) {
+    public void setIdConductor(Integer idConductor) {
         this.idConductor = idConductor;
     }
 
-    public List<Viaje> getViajeList() {
-        return viajeList;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idAutomovil == null) ? 0 : idAutomovil.hashCode());
+		return result;
+	}
 
-    public void setViajeList(List<Viaje> viajeList) {
-        this.viajeList = viajeList;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Automovil other = (Automovil) obj;
+		if (idAutomovil == null) {
+			if (other.idAutomovil != null)
+				return false;
+		} else if (!idAutomovil.equals(other.idAutomovil))
+			return false;
+		return true;
+	}
 
-    public List<Conductor> getConductorList() {
-        return conductorList;
-    }
+	@Override
+	public String toString() {
+		return "Automovil [idAutomovil=" + idAutomovil + ", modelo=" + modelo + ", asientos=" + asientos + ", soat="
+				+ soat + ", idConductor=" + idConductor + "]";
+	}
 
-    public void setConductorList(List<Conductor> conductorList) {
-        this.conductorList = conductorList;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idAutomovil != null ? idAutomovil.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Automovil)) {
-            return false;
-        }
-        Automovil other = (Automovil) object;
-        if ((this.idAutomovil == null && other.idAutomovil != null) || (this.idAutomovil != null && !this.idAutomovil.equals(other.idAutomovil))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "edu.stsm.entity.Automovil[ idAutomovil=" + idAutomovil + " ]";
-    }
-    
 }

@@ -6,6 +6,7 @@
 package edu.stsm.entity;
 
 import java.io.Serializable;
+import java.sql.Time;
 import java.util.Date;
 
 /**
@@ -16,85 +17,73 @@ public class Asiento implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    protected AsientoPK asientoPK;
+    private Time horaOcupacion;
     
-    private Date horaOcupacion;
+    private Integer idPasajero;
     
-    private Pasajero pasajero;
-    
-    private Viaje viaje;
+    private Integer idViaje;
 
     public Asiento() {
     }
 
-    public Asiento(AsientoPK asientoPK) {
-        this.asientoPK = asientoPK;
-    }
-
-    public Asiento(AsientoPK asientoPK, Date horaOcupacion) {
-        this.asientoPK = asientoPK;
-        this.horaOcupacion = horaOcupacion;
-    }
-
-    public Asiento(int idViaje, int idPasajero) {
-        this.asientoPK = new AsientoPK(idViaje, idPasajero);
-    }
-
-    public AsientoPK getAsientoPK() {
-        return asientoPK;
-    }
-
-    public void setAsientoPK(AsientoPK asientoPK) {
-        this.asientoPK = asientoPK;
-    }
-
-    public Date getHoraOcupacion() {
+    public Time getHoraOcupacion() {
         return horaOcupacion;
     }
 
-    public void setHoraOcupacion(Date horaOcupacion) {
+    public void setHoraOcupacion(Time horaOcupacion) {
         this.horaOcupacion = horaOcupacion;
     }
 
-    public Pasajero getPasajero() {
-        return pasajero;
+    public Integer getIdPasajero() {
+        return idPasajero;
     }
 
-    public void setPasajero(Pasajero pasajero) {
-        this.pasajero = pasajero;
+    public void setIdPasajero(Integer idPasajero) {
+        this.idPasajero = idPasajero;
     }
 
-    public Viaje getViaje() {
-        return viaje;
+    public Integer getIdViaje() {
+        return idViaje;
     }
 
-    public void setViaje(Viaje viaje) {
-        this.viaje = viaje;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (asientoPK != null ? asientoPK.hashCode() : 0);
-        return hash;
+    public void setIdViaje(Integer idViaje) {
+        this.idViaje = idViaje;
     }
 
     @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Asiento)) {
-            return false;
-        }
-        Asiento other = (Asiento) object;
-        if ((this.asientoPK == null && other.asientoPK != null) || (this.asientoPK != null && !this.asientoPK.equals(other.asientoPK))) {
-            return false;
-        }
-        return true;
-    }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idPasajero == null) ? 0 : idPasajero.hashCode());
+		result = prime * result + ((idViaje == null) ? 0 : idViaje.hashCode());
+		return result;
+	}
 
-    @Override
-    public String toString() {
-        return "edu.stsm.entity.Asiento[ asientoPK=" + asientoPK + " ]";
-    }
-    
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Asiento other = (Asiento) obj;
+		if (idPasajero == null) {
+			if (other.idPasajero != null)
+				return false;
+		} else if (!idPasajero.equals(other.idPasajero))
+			return false;
+		if (idViaje == null) {
+			if (other.idViaje != null)
+				return false;
+		} else if (!idViaje.equals(other.idViaje))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Asiento [horaOcupacion=" + horaOcupacion + ", idPasajero=" + idPasajero + ", idViaje=" + idViaje + "]";
+	}
+	
 }

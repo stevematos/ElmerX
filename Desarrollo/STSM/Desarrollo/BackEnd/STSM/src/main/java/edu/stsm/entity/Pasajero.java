@@ -18,9 +18,7 @@ public class Pasajero implements Serializable {
     
     private Integer idPasajero;
     
-    private Usuario idUsuario;
-    
-    private List<Asiento> asientoList;
+    private Integer idUsuario;
 
     public Pasajero() {
     }
@@ -37,45 +35,42 @@ public class Pasajero implements Serializable {
         this.idPasajero = idPasajero;
     }
 
-    public Usuario getIdUsuario() {
+    public Integer getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
     }
 
-    public List<Asiento> getAsientoList() {
-        return asientoList;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idPasajero == null) ? 0 : idPasajero.hashCode());
+		return result;
+	}
 
-    public void setAsientoList(List<Asiento> asientoList) {
-        this.asientoList = asientoList;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pasajero other = (Pasajero) obj;
+		if (idPasajero == null) {
+			if (other.idPasajero != null)
+				return false;
+		} else if (!idPasajero.equals(other.idPasajero))
+			return false;
+		return true;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idPasajero != null ? idPasajero.hashCode() : 0);
-        return hash;
-    }
+	@Override
+	public String toString() {
+		return "Pasajero [idPasajero=" + idPasajero + ", idUsuario=" + idUsuario + "]";
+	}
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Pasajero)) {
-            return false;
-        }
-        Pasajero other = (Pasajero) object;
-        if ((this.idPasajero == null && other.idPasajero != null) || (this.idPasajero != null && !this.idPasajero.equals(other.idPasajero))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "edu.stsm.entity.Pasajero[ idPasajero=" + idPasajero + " ]";
-    }
-    
 }

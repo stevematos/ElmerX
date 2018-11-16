@@ -19,12 +19,10 @@ public class Conductor implements Serializable {
     private Integer idConductor;
     
     private String licencia;
+  
+    private Integer idAutomovil;
     
-    private List<Automovil> automovilList;
-    
-    private Automovil idAutomovil;
-    
-    private Usuario idUsuario;
+    private Integer idUsuario;
 
     public Conductor() {
     }
@@ -54,53 +52,51 @@ public class Conductor implements Serializable {
         this.licencia = licencia;
     }
 
-    public List<Automovil> getAutomovilList() {
-        return automovilList;
-    }
-
-    public void setAutomovilList(List<Automovil> automovilList) {
-        this.automovilList = automovilList;
-    }
-
-    public Automovil getIdAutomovil() {
+    public Integer getIdAutomovil() {
         return idAutomovil;
     }
 
-    public void setIdAutomovil(Automovil idAutomovil) {
+    public void setIdAutomovil(Integer idAutomovil) {
         this.idAutomovil = idAutomovil;
     }
 
-    public Usuario getIdUsuario() {
+    public Integer getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (idConductor != null ? idConductor.hashCode() : 0);
-        return hash;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((idConductor == null) ? 0 : idConductor.hashCode());
+		return result;
+	}
 
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Conductor)) {
-            return false;
-        }
-        Conductor other = (Conductor) object;
-        if ((this.idConductor == null && other.idConductor != null) || (this.idConductor != null && !this.idConductor.equals(other.idConductor))) {
-            return false;
-        }
-        return true;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Conductor other = (Conductor) obj;
+		if (idConductor == null) {
+			if (other.idConductor != null)
+				return false;
+		} else if (!idConductor.equals(other.idConductor))
+			return false;
+		return true;
+	}
 
-    @Override
-    public String toString() {
-        return "edu.stsm.entity.Conductor[ idConductor=" + idConductor + " ]";
-    }
-    
+	@Override
+	public String toString() {
+		return "Conductor [idConductor=" + idConductor + ", licencia=" + licencia + ", idAutomovil=" + idAutomovil
+				+ ", idUsuario=" + idUsuario + "]";
+	}
+
 }
