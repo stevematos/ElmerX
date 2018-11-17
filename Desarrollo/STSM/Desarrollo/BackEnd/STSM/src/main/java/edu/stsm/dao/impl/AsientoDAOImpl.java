@@ -18,7 +18,6 @@ import edu.stsm.entity.rowmapper.AsientoRowMapper;
 public class AsientoDAOImpl implements IAsientoDAO {
 	
 	@Autowired
-	
 	private JdbcTemplate jdbcTemplate;
 
 	@Override

@@ -6,6 +6,7 @@
 package edu.stsm.entity;
 
 import java.io.Serializable;
+import java.sql.Time;
 import java.util.List;
 
 /**
@@ -15,20 +16,22 @@ import java.util.List;
 public class Viaje implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     private Integer idViaje;
-    
+
     private String inicio;
-    
+
     private String fin;
-    
+
     private int cupos;
-    
+
     private int cuposDisponibles;
-    
+
     private boolean enCurso;
-    
-    private Integer idAutomovil;
+
+    private Time horaPartida;
+
+    private Integer idConductor;
 
     public Viaje() {
     }
@@ -94,12 +97,20 @@ public class Viaje implements Serializable {
         this.enCurso = enCurso;
     }
 
-    public Integer getIdAutomovil() {
-        return idAutomovil;
+    public Time getHoraPartida() {
+        return horaPartida;
     }
 
-    public void setIdAutomovil(Integer idAutomovil) {
-        this.idAutomovil = idAutomovil;
+    public void setHoraPartida(Time horaPartida) {
+        this.horaPartida = horaPartida;
+    }
+
+    public Integer getIdConductor() {
+        return idConductor;
+    }
+
+    public void setIdConductor(Integer idConductor) {
+        this.idConductor = idConductor;
     }
 
 	@Override
@@ -130,8 +141,9 @@ public class Viaje implements Serializable {
 	@Override
 	public String toString() {
 		return "Viaje [idViaje=" + idViaje + ", inicio=" + inicio + ", fin=" + fin + ", cupos=" + cupos
-				+ ", cuposDisponibles=" + cuposDisponibles + ", enCurso=" + enCurso + ", idAutomovil=" + idAutomovil
-				+ "]";
+				+ ", cuposDisponibles=" + cuposDisponibles + ", enCurso=" + enCurso + ", horaPartida=" + horaPartida
+				+ ", idConductor=" + idConductor + "]";
 	}
-
+    
 }
+

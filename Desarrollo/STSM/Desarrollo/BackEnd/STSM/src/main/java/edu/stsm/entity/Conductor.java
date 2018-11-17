@@ -15,13 +15,13 @@ import java.util.List;
 public class Conductor implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     private Integer idConductor;
-    
+
     private String licencia;
-  
+
     private Integer idAutomovil;
-    
+
     private Integer idUsuario;
 
     public Conductor() {

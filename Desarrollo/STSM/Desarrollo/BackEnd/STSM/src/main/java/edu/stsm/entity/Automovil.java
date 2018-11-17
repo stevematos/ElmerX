@@ -7,6 +7,7 @@ package edu.stsm.entity;
 
 import java.io.Serializable;
 import java.util.List;
+
 /**
  *
  * @author Jhunior Cuadros
@@ -14,16 +15,14 @@ import java.util.List;
 public class Automovil implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     private Integer idAutomovil;
-    
+
     private String modelo;
-    
+
     private int asientos;
-    
+
     private String soat;
-    
-    private Integer idConductor;
 
     public Automovil() {
     }
@@ -71,14 +70,6 @@ public class Automovil implements Serializable {
         this.soat = soat;
     }
 
-    public Integer getIdConductor() {
-        return idConductor;
-    }
-
-    public void setIdConductor(Integer idConductor) {
-        this.idConductor = idConductor;
-    }
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -107,7 +98,7 @@ public class Automovil implements Serializable {
 	@Override
 	public String toString() {
 		return "Automovil [idAutomovil=" + idAutomovil + ", modelo=" + modelo + ", asientos=" + asientos + ", soat="
-				+ soat + ", idConductor=" + idConductor + "]";
+				+ soat + "]";
 	}
-
+    
 }

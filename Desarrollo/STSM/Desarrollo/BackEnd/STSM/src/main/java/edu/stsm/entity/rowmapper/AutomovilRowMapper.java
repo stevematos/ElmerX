@@ -19,7 +19,6 @@ public class AutomovilRowMapper implements RowMapper<Automovil>{
 		automovil.setModelo(rs.getString("modelo"));
 		automovil.setAsientos(rs.getInt("automovils"));
 		automovil.setSoat(rs.getString("soat"));
-		automovil.setIdConductor(rs.getInt("id_conductor"));
 		
 		return automovil;
 	}

@@ -16,10 +16,10 @@ public class ConductorRowMapper implements RowMapper<Conductor>{
 		Conductor conductor = new Conductor();
 		
 		conductor.setIdConductor(rs.getInt("id_conductor"));
-		conductor.setLicencia(rs.getString("licencia"));
-		conductor.setIdAutomovil(rs.getInt("id_automovil"));
 		conductor.setIdUsuario(rs.getInt("id_usuario"));
-		
+		conductor.setIdAutomovil(rs.getInt("id_automovil"));
+		conductor.setLicencia(rs.getString("licencia"));
+			
 		return conductor;
 	}
 

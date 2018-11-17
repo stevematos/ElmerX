@@ -18,7 +18,6 @@ import edu.stsm.entity.rowmapper.AutomovilRowMapper;
 public class AutomovilDAOImpl implements IAutomovilDAO {
 	
 	@Autowired
-	
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
