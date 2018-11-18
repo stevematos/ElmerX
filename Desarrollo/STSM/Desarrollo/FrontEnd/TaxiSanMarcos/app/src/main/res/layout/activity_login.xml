@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="@string/titulo1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo2"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/taxi_red128"
+                android:layout_margin="15sp"
+                android:layout_marginBottom="5sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_border">
+
+                <EditText
+                    android:id="@+id/edUser"
+                    android:hint="@string/hint_user"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/white"
+                    android:background="@null"
+                    android:paddingStart="5sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_border">
+
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:hint="@string/hint_pass"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/white"
+                    android:background="@null"
+                    android:paddingStart="5sp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnIniciarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/iniciar_sesion"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_btn"/>
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:onClick="redirectRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/registrarse"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_btn2"
+                android:elevation="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>
