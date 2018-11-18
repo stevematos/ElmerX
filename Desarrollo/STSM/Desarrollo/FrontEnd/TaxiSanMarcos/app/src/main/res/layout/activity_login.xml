@@ -93,8 +93,19 @@
                 android:textColor="@color/white"
                 android:background="@drawable/rounded_btn"/>
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:onClick="redirectRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/registrarse"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_btn2"
+                android:elevation="10dp"/>
 
-    </ScrollView>
+    </LinearLayout>
+
+</ScrollView>
 
 </RelativeLayout>

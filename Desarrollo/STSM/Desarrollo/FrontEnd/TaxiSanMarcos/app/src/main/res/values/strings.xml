@@ -1,8 +1,22 @@
 <resources>
     <string name="app_name">TaxiSanMarcos</string>
+
+    <!-- TEXT VIEW  -->
     <string name="titulo1">Sistema de Taxi</string>
     <string name="titulo2">San Marcos</string>
+    <string name="datosPers">Datos personales</string>
+    <string name="datosUser">Datos de usuario</string>
+
+    <!-- EDIT TEXT  -->
     <string name="hint_user">Correo electronico</string>
     <string name="hint_pass">Contraseña</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="celular">Celular</string>
+    <string name="codigo">Codigo de alumno</string>
+
+    <!-- BOTONES  -->
     <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="crearcuenta">Crear cuenta</string>
 </resources>
