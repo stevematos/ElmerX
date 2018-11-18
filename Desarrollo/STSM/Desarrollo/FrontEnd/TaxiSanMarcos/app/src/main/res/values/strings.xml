@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TaxiSanMarcos</string>
+    <string name="titulo1">Sistema de Taxi</string>
+    <string name="titulo2">San Marcos</string>
+    <string name="hint_user">Correo electronico</string>
+    <string name="hint_pass">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
 </resources>
