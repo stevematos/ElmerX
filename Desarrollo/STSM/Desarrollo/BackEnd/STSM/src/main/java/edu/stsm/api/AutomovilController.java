@@ -106,4 +106,19 @@ public class AutomovilController {
 		logger.info("< updateAutomovil [Automovil]");
 		return new ResponseEntity<Automovil>(updatedAutomovil, HttpStatus.OK);
 	}
+	
+	@RequestMapping(value = "/{idAutomovil}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Void> deleteAutomovil(@PathVariable("idAutomovil") Integer idAutomovil){
+		logger.info("> deleteAutomovil [Automovil]");
+		
+		try {
+			automovilService.deleteAutomovil(idAutomovil);
+		} catch (Exception e) {
+			logger.error("Unexpected Exception caught.", e);
+			return new ResponseEntity<Void>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		
+		logger.info("< deleteAutomovil [Automovil]");
+		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+	}
 }

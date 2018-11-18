@@ -21,7 +21,7 @@ public class ConductorDAOImpl implements IConductorDAO {
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public List<Conductor> getAllConductors() {
+	public List<Conductor> getAllConductores() {
 		// TODO Auto-generated method stub
 		String sql = "SELECT id_conductor, id_usuario, id_automovil, licencia FROM conductor";
         //RowMapper<Conductor> rowMapper = new BeanPropertyRowMapper<Conductor>(Conductor.class);
@@ -47,7 +47,8 @@ public class ConductorDAOImpl implements IConductorDAO {
 				
 		//Fetch conductor id
 		sql = "SELECT id_conductor, id_usuario, id_automovil, licencia FROM conductor WHERE id_conductor = ?";
-		Conductor addedConductor = jdbcTemplate.queryForObject(sql, Conductor.class, conductor.getIdConductor());
+		RowMapper<Conductor> rowMapper = new BeanPropertyRowMapper<Conductor>(Conductor.class);
+		Conductor addedConductor = jdbcTemplate.queryForObject(sql, rowMapper, conductor.getIdConductor());
 				
 		//Set conductor id 
 		return addedConductor;
@@ -60,8 +61,9 @@ public class ConductorDAOImpl implements IConductorDAO {
 		jdbcTemplate.update(sql, conductor.getIdUsuario(), conductor.getIdAutomovil(), conductor.getLicencia(), conductor.getIdConductor());
 		
 		//Fetch conductor id
-		sql = "SELECT id_conductor, modelo, asientos, soat FROM conductor WHERE id_conductor = ?";
-		Conductor updatedConductor = jdbcTemplate.queryForObject(sql, Conductor.class, conductor.getIdConductor());
+		sql = "SELECT id_conductor, id_usuario, id_automovil, licencia WHERE id_conductor = ?";
+		RowMapper<Conductor> rowMapper = new BeanPropertyRowMapper<Conductor>(Conductor.class);
+		Conductor updatedConductor = jdbcTemplate.queryForObject(sql, rowMapper, conductor.getIdConductor());
 						
 		//Set conductor id 
 		return updatedConductor;

@@ -6,7 +6,7 @@ import edu.stsm.entity.Conductor;
 
 public interface IConductorDAO {
 	
-	List<Conductor> getAllConductors();
+	List<Conductor> getAllConductores();
     Conductor getConductorById(Integer idConductor);
     Conductor addConductor(Conductor conductor);
     Conductor updateConductor(Conductor conductor);

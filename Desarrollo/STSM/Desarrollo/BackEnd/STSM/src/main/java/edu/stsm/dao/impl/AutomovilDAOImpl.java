@@ -47,7 +47,8 @@ public class AutomovilDAOImpl implements IAutomovilDAO {
 				
 		//Fetch automovil id
 		sql = "SELECT id_automovil, modelo, asientos, soat FROM automovil WHERE id_automovil = ?";
-		Automovil addedAutomovil = jdbcTemplate.queryForObject(sql, Automovil.class, automovil.getIdAutomovil());
+		RowMapper<Automovil> rowMapper = new BeanPropertyRowMapper<Automovil>(Automovil.class);
+		Automovil addedAutomovil = jdbcTemplate.queryForObject(sql, rowMapper, automovil.getIdAutomovil());
 				
 		//Set automovil id 
 		return addedAutomovil;
@@ -61,7 +62,8 @@ public class AutomovilDAOImpl implements IAutomovilDAO {
 		
 		//Fetch automovil id
 		sql = "SELECT id_automovil, modelo, asientos, soat FROM automovil WHERE id_automovil = ?";
-		Automovil updatedAutomovil = jdbcTemplate.queryForObject(sql, Automovil.class, automovil.getIdAutomovil());
+		RowMapper<Automovil> rowMapper = new BeanPropertyRowMapper<Automovil>(Automovil.class);
+		Automovil updatedAutomovil = jdbcTemplate.queryForObject(sql, rowMapper, automovil.getIdAutomovil());
 						
 		//Set automovil id 
 		return updatedAutomovil;

@@ -47,7 +47,8 @@ public class ViajeDAOImpl implements IViajeDAO {
 				
 		//Fetch viaje id
 		sql = "SELECT id_viaje, inicio, fin, cupos, cupos_disponibles, en_curso, id_conductor, hora_partida FROM viaje WHERE id_viaje = ?";
-		Viaje addedViaje = jdbcTemplate.queryForObject(sql, Viaje.class, viaje.getIdViaje());
+		RowMapper<Viaje> rowMapper = new BeanPropertyRowMapper<Viaje>(Viaje.class);
+		Viaje addedViaje = jdbcTemplate.queryForObject(sql, rowMapper, viaje.getIdViaje());
 				
 		//Set viaje id 
 		return addedViaje;
@@ -61,7 +62,8 @@ public class ViajeDAOImpl implements IViajeDAO {
 		
 		//Fetch viaje id
 		sql = "SELECT id_viaje, modelo, asientos, soat FROM viaje WHERE id_viaje = ?";
-		Viaje updatedViaje = jdbcTemplate.queryForObject(sql, Viaje.class, viaje.getIdViaje());
+		RowMapper<Viaje> rowMapper = new BeanPropertyRowMapper<Viaje>(Viaje.class);
+		Viaje updatedViaje = jdbcTemplate.queryForObject(sql, rowMapper, viaje.getIdViaje());
 						
 		//Set viaje id 
 		return updatedViaje;

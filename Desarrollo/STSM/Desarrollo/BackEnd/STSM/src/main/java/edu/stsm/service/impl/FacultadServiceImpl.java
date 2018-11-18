@@ -16,9 +16,9 @@ public class FacultadServiceImpl implements IFacultadService{
 	private IFacultadDAO facultadDAO;
 	
 	@Override
-	public List<Facultad> getAllFacultads() {
+	public List<Facultad> getAllFacultades() {
 		// TODO Auto-generated method stub
-		List<Facultad> facultadList = facultadDAO.getAllFacultads();
+		List<Facultad> facultadList = facultadDAO.getAllFacultades();
 		return facultadList;
 	}
 

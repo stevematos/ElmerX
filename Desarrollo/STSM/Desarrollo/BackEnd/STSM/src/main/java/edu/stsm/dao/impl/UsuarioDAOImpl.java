@@ -47,7 +47,8 @@ public class UsuarioDAOImpl implements IUsuarioDAO {
 				
 		//Fetch usuario id
 		sql = "SELECT id_usuario, id_facultad, nombre, apellidos, celular, cod_alumno, usuario, contrasena FROM usuario WHERE id_usuario = ?";
-		Usuario addedUsuario = jdbcTemplate.queryForObject(sql, Usuario.class, usuario.getIdUsuario());
+		RowMapper<Usuario> rowMapper = new BeanPropertyRowMapper<Usuario>(Usuario.class);
+		Usuario addedUsuario = jdbcTemplate.queryForObject(sql, rowMapper, usuario.getIdUsuario());
 				
 		//Set usuario id 
 		return addedUsuario;
@@ -61,7 +62,8 @@ public class UsuarioDAOImpl implements IUsuarioDAO {
 		
 		//Fetch usuario id
 		sql = "SELECT id_usuario, id_facultad, nombre, apellidos, celular, cod_alumno, usuario, contrasena FROM usuario WHERE id_usuario = ?";
-		Usuario updatedUsuario = jdbcTemplate.queryForObject(sql, Usuario.class, usuario.getIdUsuario());
+		RowMapper<Usuario> rowMapper = new BeanPropertyRowMapper<Usuario>(Usuario.class);
+		Usuario updatedUsuario = jdbcTemplate.queryForObject(sql, rowMapper, usuario.getIdUsuario());
 						
 		//Set usuario id 
 		return updatedUsuario;

@@ -47,7 +47,8 @@ public class AsientoDAOImpl implements IAsientoDAO {
 				
 		//Fetch asiento id
 		sql = "SELECT id_viaje, id_pasajero, hora_ocupacion FROM asiento WHERE id_viaje = ? and id_pasajero = ?";
-		Asiento addedAsiento = jdbcTemplate.queryForObject(sql, Asiento.class, asiento.getIdViaje(), asiento.getIdPasajero());
+		RowMapper<Asiento> rowMapper = new BeanPropertyRowMapper<Asiento>(Asiento.class);
+		Asiento addedAsiento = jdbcTemplate.queryForObject(sql, rowMapper, asiento.getIdViaje(), asiento.getIdPasajero());
 				
 		//Set asiento id 
 		return addedAsiento;
@@ -61,7 +62,8 @@ public class AsientoDAOImpl implements IAsientoDAO {
 		
 		//Fetch asiento id
 		sql = "SELECT id_viaje, id_pasajero, hora_ocupacion FROM asiento WHERE id_viaje = ? and id_pasajero = ?";
-		Asiento updatedAsiento = jdbcTemplate.queryForObject(sql, Asiento.class, asiento.getIdViaje(), asiento.getIdPasajero());
+		RowMapper<Asiento> rowMapper = new BeanPropertyRowMapper<Asiento>(Asiento.class);
+		Asiento updatedAsiento = jdbcTemplate.queryForObject(sql, rowMapper, asiento.getIdViaje(), asiento.getIdPasajero());
 						
 		//Set asiento id 
 		return updatedAsiento;

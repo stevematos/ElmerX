@@ -21,7 +21,7 @@ public class FacultadDAOImpl implements IFacultadDAO {
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public List<Facultad> getAllFacultads() {
+	public List<Facultad> getAllFacultades() {
 		// TODO Auto-generated method stub
 		String sql = "SELECT id_facultad, nombre FROM facultad";
         //RowMapper<Facultad> rowMapper = new BeanPropertyRowMapper<Facultad>(Facultad.class);
@@ -47,7 +47,8 @@ public class FacultadDAOImpl implements IFacultadDAO {
 				
 		//Fetch facultad id
 		sql = "SELECT id_facultad, nombre FROM facultad WHERE id_facultad = ?";
-		Facultad addedFacultad = jdbcTemplate.queryForObject(sql, Facultad.class, facultad.getIdFacultad());
+		RowMapper<Facultad> rowMapper = new BeanPropertyRowMapper<Facultad>(Facultad.class);
+		Facultad addedFacultad = jdbcTemplate.queryForObject(sql, rowMapper, facultad.getIdFacultad());
 				
 		//Set facultad id 
 		return addedFacultad;
@@ -61,7 +62,8 @@ public class FacultadDAOImpl implements IFacultadDAO {
 		
 		//Fetch facultad id
 		sql = "SELECT id_facultad, modelo, asientos, soat FROM facultad WHERE id_facultad = ?";
-		Facultad updatedFacultad = jdbcTemplate.queryForObject(sql, Facultad.class, facultad.getIdFacultad());
+		RowMapper<Facultad> rowMapper = new BeanPropertyRowMapper<Facultad>(Facultad.class);
+		Facultad updatedFacultad = jdbcTemplate.queryForObject(sql, rowMapper, facultad.getIdFacultad());
 						
 		//Set facultad id 
 		return updatedFacultad;

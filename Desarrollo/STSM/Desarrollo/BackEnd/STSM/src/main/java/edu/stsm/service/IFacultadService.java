@@ -6,7 +6,7 @@ import edu.stsm.entity.Facultad;
 
 public interface IFacultadService {
 	
-	List<Facultad> getAllFacultads();
+	List<Facultad> getAllFacultades();
     Facultad getFacultadById(Integer idFacultad);
     Facultad addFacultad(Facultad facultad);
     Facultad updateFacultad(Facultad facultad);

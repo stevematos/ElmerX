@@ -47,7 +47,8 @@ public class PasajeroDAOImpl implements IPasajeroDAO {
 				
 		//Fetch pasajero id
 		sql = "SELECT id_pasajero, modelo, asientos, soat FROM pasajero WHERE id_pasajero = ?";
-		Pasajero addedPasajero = jdbcTemplate.queryForObject(sql, Pasajero.class, pasajero.getIdPasajero());
+		RowMapper<Pasajero> rowMapper = new BeanPropertyRowMapper<Pasajero>(Pasajero.class);
+		Pasajero addedPasajero = jdbcTemplate.queryForObject(sql, rowMapper, pasajero.getIdPasajero());
 				
 		//Set pasajero id 
 		return addedPasajero;
@@ -61,7 +62,8 @@ public class PasajeroDAOImpl implements IPasajeroDAO {
 		
 		//Fetch pasajero id
 		sql = "SELECT id_pasajero, modelo, asientos, soat FROM pasajero WHERE id_pasajero = ?";
-		Pasajero updatedPasajero = jdbcTemplate.queryForObject(sql, Pasajero.class, pasajero.getIdPasajero());
+		RowMapper<Pasajero> rowMapper = new BeanPropertyRowMapper<Pasajero>(Pasajero.class);
+		Pasajero updatedPasajero = jdbcTemplate.queryForObject(sql, rowMapper, pasajero.getIdPasajero());
 						
 		//Set pasajero id 
 		return updatedPasajero;

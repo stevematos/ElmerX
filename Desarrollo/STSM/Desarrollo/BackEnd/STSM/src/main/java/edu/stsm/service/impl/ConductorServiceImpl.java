@@ -16,9 +16,9 @@ public class ConductorServiceImpl implements IConductorService{
 	private IConductorDAO conductorDAO;
 	
 	@Override
-	public List<Conductor> getAllConductors() {
+	public List<Conductor> getAllConductores() {
 		// TODO Auto-generated method stub
-		List<Conductor> conductorList = conductorDAO.getAllConductors();
+		List<Conductor> conductorList = conductorDAO.getAllConductores();
 		return conductorList;
 	}
 
