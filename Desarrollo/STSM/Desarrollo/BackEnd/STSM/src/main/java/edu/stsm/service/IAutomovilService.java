@@ -6,7 +6,7 @@ import edu.stsm.entity.Automovil;
 
 public interface IAutomovilService {
 	
-	List<Automovil> getAllAutomovils();
+	List<Automovil> getAllAutomoviles();
     Automovil getAutomovilById(Integer idAutomovil);
     Automovil addAutomovil(Automovil automovil);
     Automovil updateAutomovil(Automovil automovil);

@@ -21,7 +21,7 @@ public class AutomovilDAOImpl implements IAutomovilDAO {
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
-	public List<Automovil> getAllAutomovils() {
+	public List<Automovil> getAllAutomoviles() {
 		// TODO Auto-generated method stub
 		String sql = "SELECT id_automovil, modelo, asientos, soat FROM automovil";
         //RowMapper<Automovil> rowMapper = new BeanPropertyRowMapper<Automovil>(Automovil.class);

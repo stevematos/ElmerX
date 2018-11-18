@@ -16,9 +16,9 @@ public class AutomovilServiceImpl implements IAutomovilService{
 	private IAutomovilDAO automovilDAO;
 	
 	@Override
-	public List<Automovil> getAllAutomovils() {
+	public List<Automovil> getAllAutomoviles() {
 		// TODO Auto-generated method stub
-		List<Automovil> automovilList = automovilDAO.getAllAutomovils();
+		List<Automovil> automovilList = automovilDAO.getAllAutomoviles();
 		return automovilList;
 	}
 
