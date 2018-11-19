@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_user"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Ingrese sus datos"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_pass"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Ingrese sus datos"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/celular"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Ingrese sus datos"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nombres"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/nombres"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apellidos"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/apellidos"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dni"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/dni"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/facultad"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/facultad"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/codigo"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/usuario"
+        android:inputType="textPersonName"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/codigo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="4dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>
