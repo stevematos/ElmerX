@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mis_viajes"
+            android:title="Mis viajes" />
+        <item
+            android:id="@+id/nav_chat"
+            android:title="Chat San Marcos" />
+        <item
+            android:id="@+id/nav_notificaciones"
+            android:title="Notificaciones" />
+        <item
+            android:id="@+id/nav_lista_reclamos"
+            android:title="Lista de reclamos" />
+        <item
+            android:id="@+id/nav_ayuda"
+            android:title="Ayuda" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_conf_cuenta"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Configurar Cuenta" />
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_menu_send"
+                android:title="La empresa" />
+        </menu>
+    </item>
+
+</menu>
