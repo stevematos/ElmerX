@@ -19,14 +19,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistroActivity" />
-<<<<<<< HEAD
+
         <activity
             android:name=".MenuUsuario"
             android:label="@string/title_activity_menu_usuario"
-            android:theme="@style/AppTheme"></activity>
-=======
-        <activity android:name=".ModificarDatos"></activity>
->>>>>>> origin/Matos
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".ModificarDatos"/>
+
     </application>
 
 </manifest>
