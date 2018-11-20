@@ -14,6 +14,9 @@
     <string name="apellidos">Apellidos</string>
     <string name="celular">Celular</string>
     <string name="codigo">Codigo de alumno</string>
+    <string name="dni">DNI</string>
+    <string name="facultad">Facultad</string>
+
 
     <!-- BOTONES  -->
     <string name="iniciar_sesion">Iniciar sesion</string>
