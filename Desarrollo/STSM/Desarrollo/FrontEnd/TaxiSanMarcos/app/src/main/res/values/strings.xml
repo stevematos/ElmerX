@@ -22,7 +22,7 @@
     <string name="iniciar_sesion">Iniciar sesion</string>
     <string name="registrarse">Registrarse</string>
     <string name="crearcuenta">Crear cuenta</string>
-    <string name="title_activity_menu_usuario">MenuUsuario</string>
+    <string name="title_activity_menu_usuario">Inicio</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Nombre Completo de Usuario</string>
