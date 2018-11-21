@@ -10,7 +10,7 @@ import com.elmerx.taxisanmarcos.conexion.ApiService;
 
 public class ModificarDatos extends AppCompatActivity {
 
-    /*private ApiService apiService;
+    private ApiService apiService;
     private final String TAG = RegistroActivity.class.getSimpleName();
 
     EditText edNombresUp;
@@ -23,20 +23,20 @@ public class ModificarDatos extends AppCompatActivity {
 
     int id_usuario;
     Toast toast;
-    Intent intent;*/
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modificar_datos);
 
-        /*edNombresUp = findViewById(R.id.edNombresUP);
+        edNombresUp = findViewById(R.id.edNombresUP);
         edApellidosUp = findViewById(R.id.edApellidosUP);
         edCelularUp = findViewById(R.id.edCelularUP);
         edFacultadUp = findViewById(R.id.edFacultadUP);
         edCodigoAlumnoUp = findViewById(R.id.edCodigoAlumnoUP);
         edNuevoUsuarioUp = findViewById(R.id.edUsuarioUp);
-        edNuevoUsuarioPassUp = findViewById(R.id.edPasswordUP);*/
+        edNuevoUsuarioPassUp = findViewById(R.id.edPasswordUP);
 
     }
 }

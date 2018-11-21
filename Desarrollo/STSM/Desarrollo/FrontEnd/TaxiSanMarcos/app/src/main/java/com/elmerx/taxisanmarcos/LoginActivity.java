@@ -31,14 +31,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void redirectMain(View view) {
-        /*if(edUser.getText().toString().isEmpty() ||
+        if(edUser.getText().toString().isEmpty() ||
                 edPassword.getText().toString().isEmpty()){
             toast = Toast.makeText(LoginActivity.this, "Usuario y/o contraseña incorrectos", Toast.LENGTH_SHORT);
             toast.show();
 
-        }else{*/
+        }else{
             intent = new Intent(LoginActivity.this, MenuUsuario.class);
             startActivity(intent);
-        //}
+        }
     }
 }

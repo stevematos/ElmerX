@@ -14,7 +14,7 @@ public interface ApiService {
     @Headers({"Accept: application/json"})
     Call<Usuario> registrarUsuario(@Body Usuario request);
 
-    /*@POST("/usuario/update")
+    @POST("/usuario/update")
     @Headers({"Accept: application/json"})
-    Call<Usuario> updateUsuario(@Body Usuario request);*/
+    Call<Usuario> updateUsuario(@Body Usuario request);
 }
