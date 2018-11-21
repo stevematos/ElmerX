@@ -54,7 +54,7 @@
 
             <EditText
                 android:id="@+id/edCelular"
-                android:inputType="phone"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/celular"
@@ -118,6 +118,7 @@
                 android:padding="5sp"/>
 
             <Button
+                android:onClick="registrar"
                 android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
