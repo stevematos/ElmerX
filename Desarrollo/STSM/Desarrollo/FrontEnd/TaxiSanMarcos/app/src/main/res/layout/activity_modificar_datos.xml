@@ -16,7 +16,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-        android:id="@+id/usuario"
+        android:id="@+id/edUsuarioUp"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-
+        android:id="@+id/edPasswordUP"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-
+        android:id="@+id/edCelularUP"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-
+        android:id="@+id/edNombresUP"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -88,7 +88,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-
+        android:id="@+id/edApellidosUP"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -97,24 +97,7 @@
         android:textSize="16sp"
         android:paddingTop="4dp"
         android:layout_marginBottom="8dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/dni"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:layout_marginLeft="4dp"/>
 
-    <EditText
-
-        android:inputType="textPersonName"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/dni"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:paddingTop="4dp"
-        android:layout_marginBottom="8dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,7 +107,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-
+        android:id="@+id/edFacultadUP"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -142,7 +125,7 @@
         android:layout_marginLeft="4dp"/>
 
     <EditText
-
+        android:id="@+id/edCodigoAlumnoUP"
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
