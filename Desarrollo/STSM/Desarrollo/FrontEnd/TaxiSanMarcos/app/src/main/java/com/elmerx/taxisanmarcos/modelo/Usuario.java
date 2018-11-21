@@ -1,28 +1,31 @@
 package com.elmerx.taxisanmarcos.modelo;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Usuario {
-    //@SerializedName("idUsuario")
+
+    @SerializedName("idUsuario")
     private int idUsuario;
 
-    //@SerializedName("nombre")
+    @SerializedName("nombre")
     private String nombre;
 
-    //@SerializedName("apellidos")
+    @SerializedName("apellidos")
     private String apellidos;
 
-    //@SerializedName("celular")
+    @SerializedName("celular")
     private String celular;
 
-    //@SerializedName("codAlumno")
+    @SerializedName("codAlumno")
     private String codAlumno;
 
-    //@SerializedName("usuario")
+    @SerializedName("usuario")
     private String usuario;
 
-    //@SerializedName("contrasena")
+    @SerializedName("contrasena")
     private String contrasena;
 
-    //@SerializedName("idFacultad")
+    @SerializedName("idFacultad")
     private int idFacultad;
 
     public int getIdUsuario() {
