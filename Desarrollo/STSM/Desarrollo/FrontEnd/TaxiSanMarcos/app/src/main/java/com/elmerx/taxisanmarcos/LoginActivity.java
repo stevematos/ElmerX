@@ -19,4 +19,9 @@ public class LoginActivity extends AppCompatActivity {
         intent = new Intent(LoginActivity.this, RegistroActivity.class);
         startActivity(intent);
     }
+
+    public void redirectMain(View view) {
+        intent = new Intent(LoginActivity.this, MenuUsuario.class);
+        startActivity(intent);
+    }
 }
